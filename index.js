@@ -1,4 +1,4 @@
-
+const keep_alive = require('./keep_alive.js');
 function isWeekdayAndBusinessHours() {
     const currentDate = new Date();
     const dayOfWeek = currentDate.getDay();
