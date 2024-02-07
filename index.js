@@ -19,3 +19,4 @@ bot.on("error", (err) => {
 });
     
 bot.connect();
+}
