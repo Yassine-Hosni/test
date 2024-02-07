@@ -1,4 +1,5 @@
 const Eris = require("eris");
+const keep_alive = require('./keep_alive.js')
 
 function isWeekdayAndBusinessHours() {
     const currentDate = new Date();
@@ -7,7 +8,6 @@ function isWeekdayAndBusinessHours() {
 
     return (dayOfWeek >= 1 && dayOfWeek <= 5) && (currentHour >= 8 && currentHour < 16);
 }
-const keep_alive = require('./keep_alive.js')
 
 // Replace TOKEN with your bot account's token
 const bot = new Eris(process.env.token);
