@@ -8,14 +8,12 @@ function isWeekdayAndBusinessHours() {
 
     return (dayOfWeek >= 1 && dayOfWeek <= 5) && (currentHour >= 8 && currentHour < 16);
 }
-
-// Replace TOKEN with your bot account's token
+if (isWeekdayAndBusinessHours()) {
+    
 const bot = new Eris(process.env.token);
-
 bot.on("error", (err) => {
-  console.error(err); // or your preferred logger
+  console.error(err);
 });
 
-if (isWeekdayAndBusinessHours()) {
-    bot.connect(); // Get the bot to connect to Discord
+    bot.connect();
 }
