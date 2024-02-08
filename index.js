@@ -1,4 +1,3 @@
-
 function isWeekdayAndBusinessHours() {
     const currentDate = new Date();
     const dayOfWeek = currentDate.getDay();
@@ -8,16 +7,15 @@ function isWeekdayAndBusinessHours() {
     return (dayOfWeek >= 1 && dayOfWeek <= 5) && (currentHour >= 9 && currentHour < 17);
 }
 
-
 if (isWeekdayAndBusinessHours()) {
     const keep_alive = require('./keep_alive.js');
-const Eris = require("eris");
-// Replace TOKEN with your bot account's token
-const bot = new Eris(process.env.token);
+    const Eris = require("eris");
+    // Replace TOKEN with your bot account's token
+    const bot = new Eris(process.env.token);
 
-bot.on("error", (err) => {
-  console.error(err); // or your preferred logger
-});
-    
-bot.connect();
+    bot.on("error", (err) => {
+        console.error(err); // or your preferred logger
+    });
+
+    bot.connect();
 }
