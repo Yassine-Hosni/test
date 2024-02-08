@@ -5,7 +5,7 @@ function isWeekdayAndBusinessHours() {
     const currentHour = currentDate.getHours();
 
     // Check if it's Monday to Friday and between 9 am and 5 pm
-    return (dayOfWeek >= 1 && dayOfWeek <= 5) && (currentHour >= 9 && currentHour < 17);
+    return (dayOfWeek >= 1 && dayOfWeek <= 5) && (currentHour >= 8 && currentHour < 16);
 }
 
 if (isWeekdayAndBusinessHours()) {
