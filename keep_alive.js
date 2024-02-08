@@ -1,4 +1,4 @@
-const http = require('http');
+var http = require('http');
 
 http.createServer(function (req, res) {
   const currentDate = new Date();
